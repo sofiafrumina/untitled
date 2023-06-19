@@ -31,7 +31,7 @@ public class MainPage extends BaseSeleniumPage {
     public MainPage chekCity(String c){
         city.click();
         entryCity.sendKeys(c, Keys.ENTER);
-        return this;
+        return new MainPage();
     }
 
     public LoginPage openLoginPage(){
