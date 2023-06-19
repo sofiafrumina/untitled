@@ -17,6 +17,8 @@ public interface ConfigProvider {
     String false_DEMO_PASSWORD = readConfig().getString("usersParams.falseDemo.password");
     String city1 = readConfig().getString("City.city_name1");
     String city2 = readConfig().getString("City.city_name2");
+    String IdProduct = readConfig().getString("idProduct");
+    String product = readConfig().getString("Product");
 
 }
 

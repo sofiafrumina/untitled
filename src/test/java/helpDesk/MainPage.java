@@ -1,6 +1,7 @@
 package helpDesk;
 
 import core.BaseSeleniumPage;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -25,8 +26,14 @@ public class MainPage extends BaseSeleniumPage {
 
     public MainPage() {
         PageFactory.initElements(driver, this);
-        driver.get("https://www.dns-shop.ru/");
+        driver.get(ConfigProvider.URL);
     }
+    public MainPage chekCity(String c){
+        city.click();
+        entryCity.sendKeys(c, Keys.ENTER);
+        return this;
+    }
+
     public LoginPage openLoginPage(){
         entryBtn.click();
         loginBtn.click();

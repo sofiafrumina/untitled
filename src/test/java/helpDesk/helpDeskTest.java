@@ -10,5 +10,9 @@ public class helpDeskTest extends BaseSeleniumTest {
         MainPage mainPage = new MainPage();
         mainPage.openLoginPage()
                 .auth(ConfigProvider.DEMO_LOGIN, ConfigProvider.DEMO_PASSWORD);
+        mainPage.chekCity(ConfigProvider.city1);
+        mainPage.chekCity(ConfigProvider.city2);
+        PersonalPage personalPage = new PersonalPage();
+        personalPage.checkBasket(ConfigProvider.product);
     }
 }

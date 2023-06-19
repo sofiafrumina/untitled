@@ -15,8 +15,6 @@ public class LoginPage extends BaseSeleniumPage {
     private WebElement loginInput;
     @FindBy(xpath = "//input[@autocomplete='current-password']")
     private WebElement passwordInput;
-/*    @FindBy(xpath = "//div[@class='base-main-button']")
-    private WebElement finalLogBtn;*/
 
     public LoginPage() {
         PageFactory.initElements(driver,this);
