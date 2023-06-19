@@ -1,6 +1,7 @@
 package helpDesk;
 
 import core.BaseSeleniumTest;
+import org.junit.Assert;
 import org.junit.Test;
 import readConfig.ConfigProvider;
 
@@ -14,5 +15,7 @@ public class helpDeskTest extends BaseSeleniumTest {
         mainPage.chekCity(ConfigProvider.city2);
         PersonalPage personalPage = new PersonalPage();
         personalPage.checkBasket(ConfigProvider.product);
+        //Assert.assertTrue(MainPage.contains(homepageContent));
+        Assert.assertArrayEquals();
     }
 }
