@@ -1,7 +1,6 @@
 package helpDesk;
 
 import core.BaseSeleniumPage;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,6 +25,6 @@ public class PersonalPage extends BaseSeleniumPage {
        search.sendKeys(s);
        buyBtn.click();
        basketBtn.click();
-        return new PersonalPage();
+       return new PersonalPage();
     }
 }

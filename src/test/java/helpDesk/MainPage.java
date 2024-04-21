@@ -8,6 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import readConfig.ConfigProvider;
 
 public class MainPage extends BaseSeleniumPage {
+    //Всплывающая кнопка
+    @FindBy (xpath = "//span[text()='Всё верно']")
+    private WebElement spamBtn;
     @FindBy (xpath = "//div[@class='homepage__content']")
     private WebElement homepageContent;
     //поиск через строку
@@ -28,13 +31,14 @@ public class MainPage extends BaseSeleniumPage {
         PageFactory.initElements(driver, this);
         driver.get(ConfigProvider.URL);
     }
-    public MainPage chekCity(String c){
+    public MainPage checkCity(String c){
         city.click();
         entryCity.sendKeys(c, Keys.ENTER);
         return new MainPage();
     }
 
     public LoginPage openLoginPage(){
+        spamBtn.click();
         entryBtn.click();
         loginBtn.click();
         return new LoginPage();
